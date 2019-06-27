@@ -1,14 +1,21 @@
 import React from 'react'
-
-import { Container } from './styles'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { Container, Button } from './styles'
+import * as cardActions from '../../store/action/loadCard'
 
 const input = () => (
   <Container>
-    <form onSubmit={() => {}}>
+    <form>
       <input type="text" />
-      <button type="submit">OK</button>
+      <Button onClick={event => loadCard(event)}>OK</Button>
     </form>
   </Container>
 )
+const loadCard = (event) => {
+  event.preventDefault()
+}
 
-export default input
+const mapDispatchToProps = dispatch => bindActionCreators(cardActions, dispatch)
+
+export default connect(mapDispatchToProps)(input)

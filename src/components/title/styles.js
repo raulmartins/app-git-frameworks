@@ -14,7 +14,4 @@ export const Container = styled.div`
     font-weight: bold;
     letter-spacing: 5px;
   }
-
-  button {
-  }
 `

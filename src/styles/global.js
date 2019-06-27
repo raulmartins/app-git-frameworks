@@ -14,6 +14,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    font-family: sans-serif;
+    height: 100vh;
     background: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
     text-rendering:optimizeLegibility !important;
     -webkit-font-smoothing:antialiased !important;
